@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).*/
+        /*   let arg1 = Math.round(Math.random() * 100)
+               , arg2 = Math.round(Math.random() * 100);*/
+
+        let arg1 = Math.round(Math.random() * 100)
+            , arg2 = Math.round(Math.random() * 100);
+
+        function sum(arg1, arg2) {
+            return arg1 + arg2;
+        }
+
+        function dif(arg1, arg2) {
+            return arg1 - arg2;
+        }
+
+        function multip(arg1, arg2) {
+            return arg1 * arg2;
+        }
+
+        function div(arg1, arg2) {
+            return arg1 / arg2;
+        }
+
+        function mathOperation(arg1, arg2, operation) {
+            switch (operation) {
+                case '+':
+                    return sum(arg1, arg2);
+                case '-':
+                    return dif(arg1, arg2);
+                case '*':
+                    return multip(arg1, arg2);
+                case '/':
+                    return div(arg1, arg2);
+
+            }
+        }
+        console.log(mathOperation(arg1, arg2, '+'));
+        console.log(mathOperation(arg1, arg2, '-'));
+        console.log(mathOperation(arg1, arg2, '*'));
+        console.log(mathOperation(arg1, arg2, '/'));
+    </script>
+
+</body>
+
+</html>
