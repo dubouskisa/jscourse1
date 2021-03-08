@@ -16,11 +16,14 @@
             ['item1', 3, 2],
             ['item1', 21, 1]
         ];
-        let sum = 0;
-        for (let i = 0; i < cart.length; i++) {
-            sum = sum + cart[i][1] * cart[i][2];
+        function sum(cart) {
+            let totalSum = 0;
+            for (let i = 0; i < cart.length; i++) {
+                totalSum += cart[i][1] * cart[i][2];
+            }
+            return totalSum;
         }
-        console.log(sum);
+        console.log(sum(cart));
 
     </script>
 
